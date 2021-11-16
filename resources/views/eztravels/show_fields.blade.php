@@ -28,16 +28,22 @@
     <p>{{ $eztravel->arrival_date }}</p>
 </div>
 
-<!-- Passenger Name Field -->
+<!-- Passengers Field -->
 <div class="col-sm-12">
-    {!! Form::label('passenger_name', 'Passenger Name:') !!}
-    <p>{{ $eztravel->passenger_name }}</p>
+    {!! Form::label('passengers', 'Passengers:') !!}
+    <p>{{ $eztravel->passengers }}</p>
 </div>
 
-<!-- Age Field -->
+<!-- Carrier Field -->
 <div class="col-sm-12">
-    {!! Form::label('age', 'Age:') !!}
-    <p>{{ $eztravel->age }}</p>
+    {!! Form::label('carrier', 'Carrier:') !!}
+    <p>{{ $eztravel->carrier }}</p>
+</div>
+
+<!-- Status Field -->
+<div class="col-sm-12">
+    {!! Form::label('status', 'Status:') !!}
+    <p>{{ $eztravel->status }}</p>
 </div>
 
 <!-- Travel Class Field -->

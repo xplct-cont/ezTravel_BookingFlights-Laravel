@@ -1,29 +1,31 @@
 <div class="bg-dark">
 <div class="table-responsive">
     <table class="table" id="eztravels-table">
-        <thead class="bgk">
+        <thead class ="bgk">
             <tr>
                 <th>Origin</th>
         <th>Destination</th>
         <th>Flight No</th>
         <th>Departure Date</th>
         <th>Arrival Date</th>
-        <th>Passenger Name</th>
-        <th>Age</th>
+        <th>Passengers</th>
+        <th>Carrier</th>
+        <th>Status</th>
         <th>Travel Class</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
         @foreach($eztravels as $eztravel)
-            <tr class="bg-dark">
+            <tr class = "bg-dark">
                 <td>{{ $eztravel->origin }}</td>
             <td>{{ $eztravel->destination }}</td>
             <td>{{ $eztravel->flight_no }}</td>
             <td>{{ $eztravel->departure_date }}</td>
             <td>{{ $eztravel->arrival_date }}</td>
-            <td>{{ $eztravel->passenger_name }}</td>
-            <td>{{ $eztravel->age }}</td>
+            <td>{{ $eztravel->passengers }}</td>
+            <td>{{ $eztravel->carrier }}</td>
+            <td>{{ $eztravel->status }}</td>
             <td>{{ $eztravel->travel_class }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['eztravels.destroy', $eztravel->id], 'method' => 'delete']) !!}
@@ -44,7 +46,6 @@
     </table>
 </div>
 </div>
-
 <style>
     .bgk{
         background-color: #FF6700;
@@ -52,5 +53,4 @@
     th{
         color:white;
     }
-
     </style>

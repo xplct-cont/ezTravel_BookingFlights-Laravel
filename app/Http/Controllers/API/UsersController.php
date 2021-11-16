@@ -90,8 +90,9 @@ public function booking(Request $request) {
         'flight_no' => 'required',
         'departure_date' => 'required',
         'arrival_date' => 'required',
-        'passenger_name' => 'required',
-        'age' => 'required',
+        'passengers' => 'required',
+        'carrier' => 'required',
+        'status' => 'required',
         'travel_class' => 'required',
     ]);
 
@@ -111,8 +112,9 @@ public function booking(Request $request) {
             $success['fight_no'] = $eztravel->flight_no;
             $success['departure_date'] = $eztravel->departure_date;
             $success['arrival_date'] = $eztravel->arrival_date;
-            $success['passenger_name'] = $eztravel->passenger_name;
-            $success['age'] = $eztravel->age;
+            $success['passengers'] = $eztravel->passengers;
+            $success['carrier'] = $eztravel->carrier;
+            $success['status'] = $eztravel->status;
             $success['travel_class'] = $eztravel->travel_class;
 
 

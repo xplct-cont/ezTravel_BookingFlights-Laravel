@@ -27,8 +27,9 @@ class EztravelFactory extends Factory
         'flight_no' => $this->faker->word,
         'departure_date' => $this->faker->word,
         'arrival_date' => $this->faker->word,
-        'passenger_name' => $this->faker->word,
-        'age' => $this->faker->randomDigitNotNull,
+        'passengers' => $this->faker->word,
+        'carrier' => $this->faker->word,
+        'status' => $this->faker->word,
         'travel_class' => $this->faker->word,
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')

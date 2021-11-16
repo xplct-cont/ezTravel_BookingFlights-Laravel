@@ -48,16 +48,22 @@
     </script>
 @endpush
 
-<!-- Passenger Name Field -->
+<!-- Passengers Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('passenger_name', 'Passenger Name:') !!}
-    {!! Form::text('passenger_name', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+    {!! Form::label('passengers', 'Passengers:') !!}
+    {!! Form::text('passengers', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
-<!-- Age Field -->
+<!-- Carrier Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('age', 'Age:') !!}
-    {!! Form::number('age', null, ['class' => 'form-control']) !!}
+    {!! Form::label('carrier', 'Carrier:') !!}
+    {!! Form::text('carrier', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
+</div>
+
+<!-- Status Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('status', 'Status:') !!}
+    {!! Form::text('status', null, ['class' => 'form-control','maxlength' => 255,'maxlength' => 255]) !!}
 </div>
 
 <!-- Travel Class Field -->

@@ -27,7 +27,7 @@ use Response;
 
       $eztravel = DB::table('eztravel')
               ->leftJoin('users', 'eztravel.id','users.id') 
-              ->select('eztravel.id', 'eztravel.origin', 'eztravel.destination', 'eztravel.flight_no', 'eztravel.passenger_name', 'eztravel.age','eztravel.departure_date', 'eztravel.arrival_date', 'eztravel.travel_class', 'eztravel.created_at', 'eztravel.updated_at')
+              ->select('eztravel.id', 'eztravel.origin', 'eztravel.destination', 'eztravel.flight_no', 'eztravel.passengers', 'eztravel.carrier', 'eztravel.status','eztravel.departure_date', 'eztravel.arrival_date', 'eztravel.travel_class', 'eztravel.created_at', 'eztravel.updated_at')
               ->get();   
 
       return response()->json($eztravel, $this->successStatus);
@@ -81,7 +81,7 @@ use Response;
     
             if ($user != null) {
                 $eztravel = Eztravel::where('flight_no', 'LIKE', '%' . $flightno . '%')
-                    ->orWhere('passenger_name', 'LIKE', '%' . $flightno . '%')
+                    ->orWhere('passengers', 'LIKE', '%' . $flightno . '%')
                     ->get();
                 // SELECT * FROM eztravel WHERE flight no  LIKE '%flightno%' OR title LIKE '%flightno%'
                 if ($eztravel != null) {
@@ -104,7 +104,7 @@ use Response;
     
             if ($user != null) {
                 $eztravel = Eztravel::where('travel_class', 'LIKE', '%' . $travelclass . '%')
-                    ->orWhere('passenger_name', 'LIKE', '%' . $travelclass . '%')
+                    ->orWhere('travel_class', 'LIKE', '%' . $travelclass . '%')
                     ->get();
                 // SELECT * FROM eztravel WHERE travel class  LIKE '%travelclass%' OR title LIKE '%travelclass%'
                 if ($eztravel != null) {

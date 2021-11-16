@@ -27,11 +27,14 @@
             <h4> Arrival Date </h4> <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->arrival_date }}</p><hr>
             </div>
             <div class="bg-dark">
-                <h4> Passenger/s </h4>   <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->passenger_name }}</p><hr>
+                <h4> Passenger/s </h4>   <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->passengers }}</p><hr>
             </div>
             <div class="bg-dark">
-                <h4> Age </h4>  <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->age }}</p><hr>
+                <h4> Carrier </h4>  <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->carrier }}</p><hr>
             </div>
+            <div class="bg-dark">
+              <h4> Status </h4>  <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->status }}</p><hr>
+          </div>
             <div class="bg-dark">
                 <h4> Travel Class </h4>  <p><b>&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ $item->travel_class }}</p><hr>
             </div>

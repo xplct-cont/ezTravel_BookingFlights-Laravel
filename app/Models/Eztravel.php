@@ -9,20 +9,21 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Eztravel
  * @package App\Models
- * @version October 26, 2021, 5:54 am UTC
+ * @version November 16, 2021, 7:46 pm PST
  *
  * @property string $origin
  * @property string $destination
  * @property integer $flight_no
  * @property string $departure_date
  * @property string $arrival_date
- * @property string $passenger_name
- * @property integer $age
+ * @property string $passengers
+ * @property string $carrier
+ * @property string $status
  * @property string $travel_class
  */
 class Eztravel extends Model
 {
-    //use SoftDeletes;
+   // use SoftDeletes;
 
     use HasFactory;
 
@@ -42,8 +43,9 @@ class Eztravel extends Model
         'flight_no',
         'departure_date',
         'arrival_date',
-        'passenger_name',
-        'age',
+        'passengers',
+        'carrier',
+        'status',
         'travel_class'
     ];
 
@@ -59,8 +61,9 @@ class Eztravel extends Model
         'flight_no' => 'integer',
         'departure_date' => 'date',
         'arrival_date' => 'date',
-        'passenger_name' => 'string',
-        'age' => 'integer',
+        'passengers' => 'string',
+        'carrier' => 'string',
+        'status' => 'string',
         'travel_class' => 'string'
     ];
 
@@ -75,8 +78,9 @@ class Eztravel extends Model
         'flight_no' => 'required',
         'departure_date' => 'required',
         'arrival_date' => 'required',
-        'passenger_name' => 'required|string|max:255',
-        'age' => 'required|integer',
+        'passengers' => 'required|string|max:255',
+        'carrier' => 'required|string|max:255',
+        'status' => 'required|string|max:255',
         'travel_class' => 'required|string|max:30',
         'created_at' => 'nullable',
         'updated_at' => 'nullable'

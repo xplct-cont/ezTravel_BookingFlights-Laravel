@@ -38,15 +38,15 @@
         </div>
     </div>
 </div>
-    <style>
-        h3{
-            position: relative;
-            left: 360px;
-            color:#FF6700;
-            
-        }
 
-        </style>
 
+
+<style>
+    h3{
+        position: relative;
+        left: 360px;
+        color:#FF6700;
+        
+    }
+    </style>
 @endsection
-

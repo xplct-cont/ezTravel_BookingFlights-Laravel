@@ -20,8 +20,9 @@ class CreateEztravel extends Migration
             $table->bigInteger('flight_no')->unsigned();
             $table->date('departure_date');
             $table->date('arrival_date');
-            $table->string('passenger_name', 255);
-            $table->integer('age');
+            $table->string('passengers', 255);
+            $table->string('carrier');
+            $table->string('status');
             $table->string('travel_class', 30);
 
 

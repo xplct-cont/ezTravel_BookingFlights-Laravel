@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class EztravelRepository
  * @package App\Repositories
- * @version October 26, 2021, 5:54 am UTC
+ * @version November 16, 2021, 7:46 pm PST
 */
 
 class EztravelRepository extends BaseRepository
@@ -22,8 +22,9 @@ class EztravelRepository extends BaseRepository
         'flight_no',
         'departure_date',
         'arrival_date',
-        'passenger_name',
-        'age',
+        'passengers',
+        'carrier',
+        'status',
         'travel_class'
     ];
 
